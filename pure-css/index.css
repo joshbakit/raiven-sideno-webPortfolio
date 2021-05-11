@@ -1,0 +1,280 @@
+*,
+body,
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'century gothic';
+}
+
+.heading{
+    background-color: #95a5a6;
+    position: sticky;
+    width:100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav .logo{
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+}
+@media (max-width: 600px){
+    nav .logo{
+        font-size: 2rem;
+        margin: auto;
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 5em;
+    list-style: none;
+}
+@media (max-width: 600px){
+    nav ul{
+        display: none;
+    }
+}
+
+
+nav ul li a{
+    text-decoration: none;
+}
+
+nav button{
+    margin-right: 2rem;
+    border: none;
+    outline: none;
+    background-color: #95a5a6;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 600px) {
+    nav button{
+        display: inline;
+    }
+}
+
+nav button i{
+    font-size: 1.5rem; 
+}
+
+.banner{
+    background-color: #f8d133;
+    background-size: contain;
+    height: 100vh;
+    animation: mymove 5s infinite;
+    clip-path: circle(60%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-left: 2rem;
+}
+
+@keyframes mymove{
+    50%{
+        clip-path: circle(30%);
+    }
+}
+
+.banner img{
+    width: 400px;
+    height: 400px;
+}
+.banner h1{
+    letter-spacing: 2px;
+}
+
+.banner p{
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+}
+
+.banner p span{
+    color: red;
+}
+
+@media (max-width: 600px){
+    .banner{
+        height: 50vh;
+    }
+    .banner span{
+        color: red;
+    }
+    .banner p{
+        font-size: 18px;
+    }
+}
+
+.banner h1{
+    font-size: 5rem;
+}
+
+.parallax{
+    height: 70vh;
+    background-image: url('./img/bg-raiven.png');
+    background-repeat:round;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.gallery > img{
+    width: 100%;
+    height: 250px;
+}
+
+.gallery{
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 2rem;
+}
+
+.gallery h1{
+    font-size: 4rem;
+    color: #fdcb6e;
+}
+
+.parallax2{
+    height: 70vh;
+    background-image: url('./img/8-comic.png');
+    background-repeat:round;
+    background-attachment: fixed;
+    background-size:auto;
+}
+
+footer{
+    padding: 10em;
+    background-color: #d2dae2;
+    display: flex;
+}
+
+footer .text-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer .text-content h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+footer .text-content p{
+    font-size: 18px;
+    width: 400px;
+    word-wrap: break-word;
+}
+
+footer .text-content .social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .text-content .social-media i{
+    font-size: 2rem;
+}
+
+.fa-facebook{
+    color: blue;
+}
+
+.fa-envelope-square{
+    color: red;
+}
+
+form{
+    float: right;
+    background: white;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+form h2{
+    padding-bottom: 1rem;
+}
+
+form .form-group{
+    padding: 1rem 0;
+}
+
+form .form-group label{
+    font-size: 2rem;
+}
+
+form .form-group input{
+    height: 2rem;
+    width: 300px
+}
+
+form textarea{
+    margin-top: 4rem;
+    height: 250px;
+}
+form button{
+    margin-top: 2rem;
+    background-color: #171d22;
+    color: white;
+    padding: 1rem;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+form button:hover{
+    opacity: 0.9
+}
+
+
+.section{
+    background-color: #171d22;
+    height: 50vh;
+    padding: 10rem 10rem 5rem 10rem;
+
+    display: flex;
+    align-items:flex-end;
+    justify-items: center;
+    text-align: center;
+}
+
+.section > div{
+    margin: 2rem;
+}
+
+.section div h2{
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.section div p{
+    color: rgba(245, 245, 245, 0.342);
+    font-size: 14px;
+}
